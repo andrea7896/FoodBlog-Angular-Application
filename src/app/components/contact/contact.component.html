@@ -1,0 +1,39 @@
+<form class="border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div id="customAlert" *ngIf="success" ><p>Message sent succesfully! We will contact you in a moment.</p></div>  
+
+    <p class="text-center h2 mb-4">Contact us</p>
+  
+    <div class="mb-4">
+    <input type="text" formControlName="contactName" id="defaultContactFormName" mdbInput
+      class="form-control" placeholder="Name">
+    <p class="errorMsg" *ngIf="contactForm.get('contactName').hasError('required')">Name is mandatory</p>
+    </div>
+
+    <div class="mb-4">
+    <input type="email" formControlName="contactEmail" id="defaultContactFormEmail" mdbInput
+      class="form-control" placeholder="E-mail">
+    <p class="errorMsg" *ngIf="contactForm.get('contactEmail').hasError('required')">Email is mandatory</p>
+    <p class="errorMsg" *ngIf="contactForm.get('contactEmail').hasError('email')">Email not valid</p>
+    </div>
+
+    <div class="mb-4">
+    <select formControlName="contactSubject" class="browser-default custom-select">
+      <option value="" disabled>Choose option</option>
+      <option value="1" selected>Feedback</option>
+      <option value="2">Report a bug</option>
+      <option value="3">Feature request</option>
+      <option value="4">Feature request</option>
+    </select>
+    <p class="errorMsg" *ngIf="contactForm.get('contactSubject').hasError('required')">Subject is mandatory</p>
+    </div>
+
+    <div class="form-group mb-4">
+      <textarea style="resize: none;" formControlName="contactMessage" class="form-control rounded-3" mdbInput id="exampleFormControlTextarea2"
+        maxlength="250" rows="3" placeholder="Message"></textarea>
+        <small><code>{{contactForm.controls.contactMessage.value.length}}</code> of <code>250</code> characters</small>  
+      <p class="errorMsg" *ngIf="contactForm.get('contactMessage').hasError('required')">Message is mandatory</p>
+    </div>
+
+    <div style="display: flex;justify-content: center;"><button style="width: 25%;" type="submit" class="btn btn-info" [disabled]="contactForm.invalid">Send</button></div>
+    
+  </form>

@@ -1,0 +1,24 @@
+<div class="head-title">
+    <h1>Recent posts</h1>
+    <button type="button" style="margin-top:10px;width: 50%;" class="btn btn-success" (click)="clickEvent()">
+        Create new post
+    </button>
+</div>
+<div id="posts-container" >
+    <div *ngIf="hideLoader" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" >
+          <span class="sr-only" id="loading"></span>
+        </div>
+      </div>
+    <div class="card" *ngFor="let post of posts">
+        <img src='{{post.imgUrl}}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{post.titlePost}}</h5>
+          <p class="card-subtitle mb-2 text-muted">Posted by: {{post.postedByName}}</p>
+          <p class="card-text">{{post.subtitlePost}}</p>
+          <a href='/postdetails?id={{post.id}}' class="btn btn-primary">More Details</a>
+        </div>
+    </div>
+</div>
+
+

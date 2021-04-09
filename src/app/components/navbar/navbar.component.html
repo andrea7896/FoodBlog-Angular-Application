@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['home']">
+        <img src="../../../assets/img/icon.png" width="50px" height="50px">
+        <span id="brandName">Food lovers</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+          <a class="nav-link active" routerLinkActive="active"  aria-current="page" [routerLink]="['home']">Home</a>
+          <a class="nav-link"  [routerLink]="['posts']">Posts</a>
+          <a class="nav-link"  [routerLink]="['contact']">Contact</a>
+        </div>
+        <div id="loggedOptions">
+        <span class="navbar-text">
+          <img src="../../../assets/img/user.png" style="border-radius: 100%; height: 24px;width: 24px;">
+            Welcome {{global.loggedUser.name}}
+        </span>
+        </div>
+      </div>
+    </div>
+  </nav>

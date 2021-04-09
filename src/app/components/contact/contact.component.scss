@@ -1,0 +1,16 @@
+.errorMsg{
+    color: red;
+}
+
+#customAlert{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    color: darkslategray;
+    font-weight: bold;
+    text-align: center;
+}
+

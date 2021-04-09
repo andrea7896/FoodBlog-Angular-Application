@@ -1,0 +1,43 @@
+<div id="form-container">
+    <form [formGroup]="form">
+      <div class="customAlert" *ngIf="success"><span>{{alertMessage}}</span></div>
+      <label for="titleInput">Post title</label>
+      <input type="text" class="form-control" id="titleInput" placeholder="Title" formControlName="titlePost">
+      <div *ngIf="form.get('titlePost').errors">
+      <p class="errorMsg" *ngIf="form.get('titlePost').hasError('required')">Post title is mandatory</p>
+      <p class="errorMsg" *ngIf="form.get('titlePost').hasError('maxlength')">Post title too long</p>
+      </div> 
+      <label for="subtitleInput">Post Subtitle</label>
+      <input type="text" class="form-control" id="subtitleInput" maxlength="100" placeholder="Subtitle" formControlName="subtitlePost"> 
+      <div *ngIf="form.get('subtitlePost').errors">
+      <p class="errorMsg" *ngIf="form.get('subtitlePost').hasError('required')">Post subtitle is mandatory</p>   
+      </div>
+      <label for="bodyInput">Post content</label>
+      <textarea style="height: 120px; resize: none;" class="form-control" maxlength="500" id="bodyInput" placeholder="Description" formControlName="bodyPost"></textarea>
+      <div>
+      <small><code>{{form.controls.bodyPost.value.length}}</code> of <code>500</code> characters</small>
+      </div>
+      <div *ngIf="form.get('bodyPost').errors">
+        <p class="errorMsg" *ngIf="form.get('bodyPost').hasError('required')">Post Body is mandatory</p>
+      </div>
+      <label for="imageInput">Image Post Url</label>
+      <input type="url" class="form-control" id="imageInput" placeholder="image Url" formControlName="imgUrl"> 
+      <div *ngIf="form.get('imgUrl').errors">
+        <p class="errorMsg" *ngIf="form.get('imgUrl').hasError('required')">Image is required</p>
+      </div>
+      <label for="ratingSelect">Rating Stars</label>
+      <select id="ratingSelect" class="form-control" id="ratingInput" formControlName="rating">
+        <option *ngFor="let rating of ratingOptions" [ngValue]="rating" [selected]="">
+        {{rating}}
+        </option>
+      </select>
+      <div *ngIf="form.get('rating').errors">
+        <p class="errorMsg" *ngIf="form.get('rating').hasError('required')">Rating is required</p>
+      </div>
+
+      <div style="padding: 10px;">
+      <button style="margin: 10px;" class="btn btn-success" *ngIf="!isUpdatePost" (click)="createPost()" [disabled]="!form.valid">Create post</button>
+      <button style="margin: 10px;" class="btn btn-success" *ngIf="isUpdatePost" (click)="updatePost()" [disabled]="!form.valid">Update post</button>
+      </div>
+    </form>
+</div>

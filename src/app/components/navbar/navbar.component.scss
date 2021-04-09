@@ -1,0 +1,19 @@
+#brandName{
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#loggedOptions{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    #loggedOptions{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
