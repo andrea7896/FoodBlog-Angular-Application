@@ -11,7 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PostsComponent } from './components/posts/posts/posts.component';
 import { PostdetailsComponent } from './components/posts/postdetails/postdetails.component';
 import { FormpostComponent } from './components/posts/formpost/formpost.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/fontawesome-free';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FontAwesomeModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

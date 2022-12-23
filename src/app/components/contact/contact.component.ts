@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { CrudService } from '../../services/crud.service';
 
 @Component({
@@ -9,18 +9,18 @@ import { CrudService } from '../../services/crud.service';
 })
 
 export class ContactComponent implements OnInit {
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
   success: boolean = false;
   contact:object = {contactName: "", contactEmail: "", contactSubject: "", contactMessage: ""}
 
   constructor(private crudService:CrudService) { }
 
   ngOnInit(): void {
-    this.contactForm = new FormGroup({
-      contactName: new FormControl('', [Validators.required]),
-      contactEmail: new FormControl('',[Validators.required,Validators.email]),
-      contactSubject: new FormControl('',Validators.required),
-      contactMessage: new FormControl('',Validators.required)
+    this.contactForm = new UntypedFormGroup({
+      contactName: new UntypedFormControl('', [Validators.required]),
+      contactEmail: new UntypedFormControl('',[Validators.required,Validators.email]),
+      contactSubject: new UntypedFormControl('',Validators.required),
+      contactMessage: new UntypedFormControl('',Validators.required)
     });
   }
 

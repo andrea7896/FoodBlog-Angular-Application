@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../../services/crud.service'
 import { Router } from '@angular/router'
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/fontawesome-free';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -12,9 +12,9 @@ export class PostsComponent implements OnInit {
   public posts:Object;
   public hideLoader:boolean = true;
   faPlus = faPlus;
-  
-  constructor(private router:Router,private crudService:CrudService) { 
-  
+
+  constructor(private router:Router,private crudService:CrudService) {
+
   }
 
   ngOnInit(): void {

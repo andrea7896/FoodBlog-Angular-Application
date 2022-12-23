@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../../../services/crud.service';
 import { GlobalVariable } from '../../../Global-variable';
@@ -13,7 +13,7 @@ import { Router } from '@angular/router'
 })
 
 export class FormpostComponent implements OnInit {
-  form:FormGroup;
+  form:UntypedFormGroup;
   public id:number;
   public postInfo:any;
   public ratingOptions:any = [1,2,3,4,5];
@@ -35,23 +35,23 @@ export class FormpostComponent implements OnInit {
   ngOnInit(): void {
     this.getUrlId();
 
-    this.form = new FormGroup({
-      titlePost: new FormControl('',[
+    this.form = new UntypedFormGroup({
+      titlePost: new UntypedFormControl('',[
       Validators.required,
         Validators.maxLength(50)
       ]),
-      bodyPost: new FormControl('',[
+      bodyPost: new UntypedFormControl('',[
         Validators.required,
         Validators.maxLength(500)
       ]),
-      subtitlePost: new FormControl('',[
+      subtitlePost: new UntypedFormControl('',[
         Validators.required,
         Validators.maxLength(100)
       ]),
-      imgUrl: new FormControl('',[
+      imgUrl: new UntypedFormControl('',[
         Validators.required
       ]),
-      rating: new FormControl('',[
+      rating: new UntypedFormControl('',[
         Validators.required
       ])
     });
