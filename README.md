@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
+Recently Upgrading from 10v to 15v of Angular CLI.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -28,3 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Node_modules folder ignored
 run npm init
+
+## JSON-Server
+This Angular practice application use JSON Server as API REST service, be sure to install it with:
+`npm install -g json-server`
+Run server with:
+`json-server --watch servers/db.json` or `npm run json:server`
+
+Data consumed for Application is in servers/db.json file
