@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Recently Upgrading from 10v to 15v of Angular CLI.
 
-![foodblog](Landing-page.png=400x250)
+![foodblog](https://github.com/andrea7896/FoodBlog-Angular-Application/blob/main/Landing-page.png?=400x250)
 
 ## Development server
 
