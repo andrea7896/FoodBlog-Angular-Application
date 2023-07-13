@@ -3,14 +3,14 @@
         <h1>{{title}}</h1>
         <h3>{{subtitle}}</h3>
         <span style="font-weight: bold; color:white">
-            Rating: <fa-icon [icon]="star" *ngFor="let x of starRating"></fa-icon>
+            Rating: {{starRating}}/5 ⭐<!--<fa-icon [icon]="star" *ngFor="let x of starRating"></fa-icon>--> <span><i *ngFor="let x of starRating">*</i></span>
         </span>
         <span>Posted by {{postedName}}</span>
         <p style="margin-top: 30px;">{{bodyPost}}</p>
         <div *ngIf="userLogged">
             <button class="btn btn-primary" style="margin: 10px;" (click)="modifyPost()">Edit</button>
-            <button class="btn btn-danger" style="margin: 10px;" (click)="deletePost()">Delete</button>   
-            
+            <button class="btn btn-danger" style="margin: 10px;" (click)="deletePost()">Delete</button>
+
         </div>
     </div>
     <div id="postDetailsImage">
