@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { CrudService } from '../../../services/crud.service'
-import { faStar } from '@fortawesome/fontawesome-free';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { GlobalVariable } from '../../../Global-variable';
 import { Router } from '@angular/router'
 
@@ -22,7 +22,7 @@ export class PostdetailsComponent implements OnInit {
   public bodyPost:string;
   public postDetails:any;
   public rating:number;
-  public starRating:number;
+  public starRating:number[];
   public userLogged:boolean = false;
   star = faStar;
 
@@ -70,7 +70,8 @@ export class PostdetailsComponent implements OnInit {
       this.postedName = this.postDetails.postedByName;
       this.postedById = this.postDetails.postedById;
       this.image = this.postDetails.imgUrl;
-      this.starRating = /*Array(this.postDetails.rating).fill(0).map((x,i)=>i);*/this.postDetails.rating;
+      this.rating = this.postDetails.rating;
+      this.starRating = Array(this.postDetails.rating).fill(0).map((x,i)=>i);
 
       this.isPostFromUserLogged();
     });

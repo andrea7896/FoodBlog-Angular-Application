@@ -3,7 +3,7 @@
         <h1>{{title}}</h1>
         <h3>{{subtitle}}</h3>
         <span style="font-weight: bold; color:white">
-            Rating: {{starRating}}/5 ⭐<!--<fa-icon [icon]="star" *ngFor="let x of starRating"></fa-icon>--> <span><i *ngFor="let x of starRating">*</i></span>
+            Rating: {{rating}}/5 <fa-icon [icon]="star" *ngFor="let st of starRating"></fa-icon>
         </span>
         <span>Posted by {{postedName}}</span>
         <p style="margin-top: 30px;">{{bodyPost}}</p>

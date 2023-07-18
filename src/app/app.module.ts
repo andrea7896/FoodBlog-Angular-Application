@@ -11,7 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { PostsComponent } from './components/posts/posts/posts.component';
 import { PostdetailsComponent } from './components/posts/postdetails/postdetails.component';
 import { FormpostComponent } from './components/posts/formpost/formpost.component';
-import { FontAwesomeModule } from '@fortawesome/fontawesome-free';
+//import { FontAwesomeModule } from '@fortawesome/fontawesome-free';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/fontawesome-free';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
     ReactiveFormsModule
   ],
   providers: [],
