@@ -1,0 +1,109 @@
+{
+  "Posts": [
+    {
+      "id": 1,
+      "postedById": 1,
+      "postedByName": "Andrea",
+      "titlePost": "Jamaican Pepper Shrimp",
+      "subtitlePost": "Experiment new flavors",
+      "bodyPost": "Drive around Jamaica and you’ll whizz by food stalls at the roadside, small stands with fish roasting on grill grates and stock pots brimming with soup roiling over open flames. If you're on one of these drives, and if your eyes catch a vendor with small clear bags stuffed with bright red shrimp, you should slow down and try some.",
+      "imgUrl": "../../../assets/img/shrimp.jpg",
+      "rating": 3
+    },
+    {
+      "titlePost": "Quinoa Niçoise",
+      "bodyPost": "Now that it's colder outside, we find ourselves gravitating toward heavier dishes at the end of the day. But it doesn't have to be this way. While many salads may not fill a cold-weather comfort-food void, there is one that can: the Niçoise. For this recipe, we gather the traditional ingredients for the salad with a few twists. The first and most important: We use canned wild Alaska salmon. It's a fresh take on a satisfying dish that will deliver healthy ingredients amidst a decadent holiday season.",
+      "subtitlePost": "Salad With Canned Wild Alaska Salmon",
+      "imgUrl": "../../../assets/img/salad.png",
+      "rating": 2,
+      "postedById": 1,
+      "postedByName": "Andrea",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "postedById": 2,
+      "postedByName": "Jose P.",
+      "titlePost": "Torrijas Caramelizadas",
+      "subtitlePost": "(Spanish-Style Caramelized French Toast)",
+      "bodyPost": "The torrija that blew me away at Elkano—with its milk foam, brûléed sugar crust, and quenelle of ice cream—was decidedly modern in its presentation. On a different visit to Madrid years before around Easter time, I had enjoyed more straightforward versions of torrijas at the aptly named La Casa de las Torrijas, where they serve snack-sized portions of milk- and sweet wine–soaked torrijas.",
+      "imgUrl": "../../../assets/img/torreja.jpg",
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "postedById": 2,
+      "postedByName": "Jose P.",
+      "titlePost": "Chouquettes",
+      "subtitlePost": "French Cream Puff Recipe",
+      "bodyPost": "These bite-size puffs made from choux pastry are topped with lightly crunchy grains of pearl sugar. They make a great snack for anyone with a sweet tooth, or a light dessert to follow a big meal. Wrapped in cellophane plastic bags, they also make nice gifts and stocking stuffers around the holidays.",
+      "imgUrl": "../../../assets/img/chouquettes.jpg",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "postedById": 1,
+      "postedByName": "Andrea",
+      "titlePost": "Eggs Florentine Pizza",
+      "subtitlePost": "Top with spinach and mozzarella",
+      "bodyPost": "Dot the pizza with spinach, tomato slices, and plenty of cheese—creamy mozzarella and salty parmesan to be exact. Is that your stomach growling I hear?Eggs Florentine Breakfast Pizza",
+      "imgUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/eggs-florentine-pizza-2adefac.jpg?quality=90&webp=true&resize=300,272",
+      "rating": 4
+    },
+    {
+      "titlePost": "Creamy Spinach Artichoke Orzotto",
+      "bodyPost": "Load up the pot with sweet spinach and tender artichokes and the result is a complete meal that perfectly walks the line between comfort and freshness, making it the ultimate choice for these first sunny days of the new season.",
+      "subtitlePost": "Creamy, lemony, veggie-packed orzotto",
+      "imgUrl": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2FPhoto%2FRecipes%2F2021-04-spinach-artichoke-orzotto%2FSpinach-Artichoke-Orzotto-1",
+      "rating": 3,
+      "postedById": 1,
+      "postedByName": "Andrea",
+      "id": 6
+    },
+    {
+      "titlePost": "Creamy Spinach Artichoke Orzotto",
+      "bodyPost": "Delicious! and yumm!\n",
+      "subtitlePost": "Taste this new recipe",
+      "imgUrl": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2FPhoto%2FRecipes%2F2021-04-spinach-artichoke-orzotto%2FSpinach-Artichoke-Orzotto-1",
+      "rating": 5,
+      "postedById": 1,
+      "postedByName": "Andrea",
+      "id": 7
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "username": "Andrea S.",
+      "email": "andrea@hotmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Jose P.",
+      "email": "jose123@hotmail.com"
+    }
+  ],
+  "Contact": [
+    {
+      "contactName": "Andrea",
+      "contactEmail": "andrea@hotmail.com",
+      "contactSubject": "1",
+      "contactMessage": "Hola",
+      "id": 1
+    },
+    {
+      "contactName": "Andrea",
+      "contactEmail": "andrea@hotmail.com",
+      "contactSubject": "2",
+      "contactMessage": "cdfsfsfsds",
+      "id": 2
+    },
+    {
+      "contactName": "Andrea",
+      "contactEmail": "andrea@server.com",
+      "contactSubject": "1",
+      "contactMessage": "Hey Hello! ",
+      "id": 3
+    }
+  ]
+}
